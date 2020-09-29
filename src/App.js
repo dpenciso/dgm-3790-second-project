@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import AmiiboList from './components/AmiiboList'
+import Amiibo from './components/Amiibo'
 
 function App() {
   return (
     <div className="App">
-      <AmiiboList/>
+      <Amiibo/>
     </div>
   );
 }

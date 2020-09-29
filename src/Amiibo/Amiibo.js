@@ -12,11 +12,11 @@ import Typography from '@material-ui/core/Typography';
 
 const Amiibo = () => {
 
-  const [amiiboCharList, setAmiiboCharList] = useState("");
-  const [amiiboCharName, setAmiiboCharName] = useState("");
-  const [amiiboCharRelease, setAmiiboCharRelease] = useState("");
-  const [amiiboCharGame, setAmiiboCharGame] = useState("");
-  const [amiiboCharImg, setAmiiboCharImg] = useState("");
+  const [amiiboCharList, setAmiiboCharList] = useState(null);
+  const [amiiboCharName, setAmiiboCharName] = useState(null);
+  const [amiiboCharRelease, setAmiiboCharRelease] = useState(null);
+  const [amiiboCharGame, setAmiiboCharGame] = useState(null);
+  const [amiiboCharImg, setAmiiboCharImg] = useState(null);
 
   const fetchAmiiboList = async () => {
     try {
@@ -50,8 +50,14 @@ const Amiibo = () => {
   });
 
   const classes = useStyles();
+
+  const names = amiiboCharList
   
   return (
+
+
+   
+
     <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
@@ -61,7 +67,7 @@ const Amiibo = () => {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            Lizards
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging

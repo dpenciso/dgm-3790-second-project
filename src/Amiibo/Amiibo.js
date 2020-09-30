@@ -1,90 +1,91 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import './amiibo.css'
 
+function Amiibo() {
+  const [amiibos, setAmiibos] = useState(null);
 
-const Amiibo = () => {
+  const apiURL = "https://www.amiiboapi.com/api/amiibo";
 
-  const [amiiboCharList, setAmiiboCharList] = useState(null);
-  const [amiiboCharName, setAmiiboCharName] = useState(null);
-  const [amiiboCharRelease, setAmiiboCharRelease] = useState(null);
-  const [amiiboCharGame, setAmiiboCharGame] = useState(null);
-  const [amiiboCharImg, setAmiiboCharImg] = useState(null);
+  const fetchData = async () => {
+    const response = await axios.get(apiURL);
 
-  const fetchAmiiboList = async () => {
-    try {
-      const response = await axios.get("https://www.amiiboapi.com/api/amiibo");
-      const amibList = response.data.amiibo;
-      const amibName = amibList.map((char) => char.name);
-      const amibRelease = amibList.map((char) => char.release.na);
-      const amibGame = amibList.map((char) => char.gameSeries);
-      const amibImg = amibList.map((char) => char.image);
-      setAmiiboCharList(amibList);
-      setAmiiboCharName(amibName);
-      setAmiiboCharRelease(amibRelease);
-      setAmiiboCharGame(amibGame);
-      setAmiiboCharImg(amibImg)
-    } catch (error) {
-      console.log(error);
-    }
+    setAmiibos(response.data.amiibo);
   };
 
   useEffect(() => {
-    fetchAmiiboList();
+    fetchData();
   }, []);
 
   const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      maxWidth: 250,
+      margin: '1rem',
     },
     media: {
-      height: 140,
+      height: 400,
     },
   });
 
   const classes = useStyles();
 
-  const names = amiiboCharList
-  
   return (
+    <div className="app">
 
+      <div className='container-container'>
+        {amiibos &&
+          amiibos.map((amiibo) => {
+            const name = amiibo.name;
+            const game = amiibo.gameSeries;
+            const image = amiibo.image
+            const release = amiibo.release.na
+            const key = amiibo.tail
 
-   
-
-    <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizards
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
+            return (
+              <div className='cards-container' key={key}>
+                <Card className={classes.root}>
+                  <CardActionArea onClick={()=> window.open( image , "_blank")}>
+                    <CardMedia
+                      className={classes.media}
+                      image={ image }
+                      title={ name }
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        { name }
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="textSecondary"
+                        component="p"
+                      >
+                        The { name } Amiibo, from the { game } series, was originally released in North America on { release }
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    {/* <Button size="small" color="primary">
+                      Share
+                    </Button> */}
+                    <Button size="small" color="primary" onClick={()=> window.open('https://www.nintendo.com/amiibo/', "_blank")}>
+                      Learn More
+                    </Button>
+                  </CardActions>
+                </Card>
+              </div>
+            );
+          })}
+      </div>
+    </div>
   );
-};
+}
 
 export default Amiibo;

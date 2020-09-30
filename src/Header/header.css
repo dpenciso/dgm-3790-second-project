@@ -1,0 +1,13 @@
+.theDiv {
+    background-image: url(../amiibo-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 5rem 0;
+}
+
+.theDiv h1 {
+    color: white;
+    text-shadow: 0 3px 4px black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+}

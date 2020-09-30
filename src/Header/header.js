@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return (
             <div className="theDiv">
-                <h1>These are all the Amiibos ever released sorted by game</h1>
+                <h1>These are all the Amiibos ever released</h1>
             </div>
         )
     }

@@ -72,7 +72,7 @@ export default function Email() {
             handleSubmit,
             isSubmitting,
           }) => (
-            <form>
+            <form onSubmit={handleSubmit}>
               <DialogContent>
                 <DialogContentText>
                   To subscribe to this website, please enter your first name,
@@ -120,17 +120,17 @@ export default function Email() {
                   required
                 />
               </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose} color="primary" variant='contained'>
+                  Cancel
+                </Button>
+                <Button onClick={handleClose} color="primary" variant='contained' type='submit' disabled={Boolean(errors.email || errors.firstName || errors.lastName)}>
+                  Subscribe
+                </Button>
+              </DialogActions>
             </form>
           )}
         </Formik>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary">
-            Subscribe
-          </Button>
-        </DialogActions>
       </Dialog>
     </div>
   );

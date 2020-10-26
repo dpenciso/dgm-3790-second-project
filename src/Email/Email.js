@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
@@ -8,6 +8,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { SignContext } from "../contexts/SignContext"
 
 export default function Email() {
   const [open, setOpen] = React.useState(true);
@@ -19,6 +20,8 @@ export default function Email() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const signContext = useContext(SignContext)
 
   return (
     <div>
@@ -55,8 +58,9 @@ export default function Email() {
               .min(2, "Must be at least 2 characters")
               .max(50, "Must be less than 50 characters"),
           })}
-          onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
+          onSubmit={ (values, { setErrors, setStatus, setSubmitting }) => {
             try {
+              signContext.login()
               console.log(values.email, values.firstName, values.lastName);
             } catch (err) {
               console.log(err);
@@ -121,10 +125,22 @@ export default function Email() {
                 />
               </DialogContent>
               <DialogActions>
-                <Button onClick={handleClose} color="primary" variant='contained'>
+                <Button
+                  onClick={handleClose}
+                  color="primary"
+                  variant="contained"
+                >
                   Cancel
                 </Button>
-                <Button onClick={handleClose} color="primary" variant='contained' type='submit' disabled={Boolean(errors.email || errors.firstName || errors.lastName)}>
+                <Button
+                  onClick={handleClose}
+                  color="primary"
+                  variant="contained"
+                  type="submit"
+                  disabled={Boolean(
+                    errors.email || errors.firstName || errors.lastName
+                  )}
+                >
                   Subscribe
                 </Button>
               </DialogActions>

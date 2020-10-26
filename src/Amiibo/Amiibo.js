@@ -43,31 +43,27 @@ function Amiibo() {
       <div className='container-container'>
         {amiibos &&
           amiibos.map((amiibo) => {
-            const name = amiibo.name;
-            const game = amiibo.gameSeries;
-            const image = amiibo.image
-            const release = amiibo.release.na
-            const key = amiibo.tail
+            
 
             return (
-              <div className='cards-container' key={key}>
+              <div className='cards-container' key={amiibo.tail}>
                 <Card className={classes.root}>
-                  <CardActionArea onClick={()=> window.open( image , "_blank")}>
+                  <CardActionArea onClick={()=> window.open( amiibo.image , "_blank")}>
                     <CardMedia
                       className={classes.media}
-                      image={ image }
-                      title={ name }
+                      image={ amiibo.image }
+                      title={ amiibo.name }
                     />
                     <CardContent>
                       <Typography gutterBottom variant="h5" component="h2">
-                        { name }
+                        { amiibo.name }
                       </Typography>
                       <Typography
                         variant="body2"
                         color="textSecondary"
                         component="p"
                       >
-                        The { name } Amiibo, from the { game } series, was originally released in North America on { release }
+                        The { amiibo.name } Amiibo, from the { amiibo.gameSeries } series, was originally released in North America on { amiibo.release.na }
                       </Typography>
                     </CardContent>
                   </CardActionArea>

@@ -8,7 +8,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { SignContext } from "../contexts/SignContext"
+// import { SignContext } from "../contexts/SignContext"
 
 export default function Email() {
   const [open, setOpen] = React.useState(true);
@@ -21,7 +21,7 @@ export default function Email() {
     setOpen(false);
   };
 
-  const signContext = useContext(SignContext)
+  // const signContext = useContext(SignContext)
 
   return (
     <div>
@@ -60,7 +60,7 @@ export default function Email() {
           })}
           onSubmit={ (values, { setErrors, setStatus, setSubmitting }) => {
             try {
-              signContext.login()
+              // signContext.login()
               console.log(values.email, values.firstName, values.lastName);
             } catch (err) {
               console.log(err);

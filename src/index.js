@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import SignContextProvider from "./contexts/SignContext";
+import SignContextProvider from "./Contexts/SignContext";
 
 ReactDOM.render(
   <React.StrictMode>

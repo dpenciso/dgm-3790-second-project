@@ -61,7 +61,7 @@ export default function Email() {
           onSubmit={ (values, { setErrors, setStatus, setSubmitting }) => {
             try {
               signContext.login()
-              console.log(values.email, values.firstName, values.lastName);
+              console.log(`${values.email}, ${values.firstName} ${values.lastName} has successfully subscribed!`);
             } catch (err) {
               console.log(err);
             }

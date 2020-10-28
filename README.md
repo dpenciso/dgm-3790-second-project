@@ -37,6 +37,24 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+## App Features
+
+### Function-based Amiibo Component
+
+This component imports a .json file containing information about all the Amiibos ever realeased and displays the figure's name, game, series, and date of release in North America. The Amiibos are sorted by game.
+
+### Using the useEffect Hook
+
+The primary location of my useEffect code is in the [Amiibo.js](/Amiibo/Amiibo.js) file.
+
+### Using the useContext Hook
+
+The primary location of my useContext code is in the [signContext.js](/contexts/signContext.js) file and it is then imported to the [Email.js](/Email/Email.js) file.
+
+### Using the useState Hook
+
+My useState code is used in the [signContext.js](/contexts/signContext.js), [Amiibo.js](/Amiibo/Amiibo.js), and [Email.js](/Email/Email.js) files.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).

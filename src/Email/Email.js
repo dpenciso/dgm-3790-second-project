@@ -8,7 +8,7 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import SignContext from "../Contexts/SignContext"
+import { SignContext } from "../contexts/signContext"
 
 export default function Email() {
   const [open, setOpen] = React.useState(true);

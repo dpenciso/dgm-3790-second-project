@@ -45,15 +45,15 @@ This component imports a .json file containing information about all the Amiibos
 
 ### Using the useEffect Hook
 
-The primary location of my useEffect code is in the [Amiibo.js](/Amiibo/Amiibo.js) file.
+The primary location of my useEffect code is in the [Amiibo.js](/src/Amiibo/Amiibo.js) file.
 
 ### Using the useContext Hook
 
-The primary location of my useContext code is in the [signContext.js](/contexts/signContext.js) file and it is then imported to the [Email.js](/Email/Email.js) file.
+The primary location of my useContext code is in the [signContext.js](/src/contexts/signContext.js) file and it is then imported to the [Email.js](/src/Email/Email.js) file.
 
 ### Using the useState Hook
 
-My useState code is used in the [signContext.js](/contexts/signContext.js), [Amiibo.js](/Amiibo/Amiibo.js), and [Email.js](/Email/Email.js) files.
+My useState code is used in the [signContext.js](/src/contexts/signContext.js), [Amiibo.js](/src/Amiibo/Amiibo.js), and [Email.js](/src/Email/Email.js) files.
 
 ## Learn More
 

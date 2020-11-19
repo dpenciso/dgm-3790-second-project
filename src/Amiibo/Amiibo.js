@@ -13,7 +13,7 @@ import './amiibo.css'
 function Amiibo() {
   const [amiibos, setAmiibos] = useState(null);
 
-  const apiURL = "https://www.amiiboapi.com/api/amiibo";
+  const apiURL = "https://www.amiiboapi.com/api/amiibo/";
 
   const fetchData = async () => {
     const response = await axios.get(apiURL);

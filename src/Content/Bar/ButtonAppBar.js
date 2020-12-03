@@ -5,6 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Email from '../Email/Email'
+import './ButtonAppBar.css'
+import { Link } from 'react-router-dom';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,7 +30,15 @@ export default function ButtonAppBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Amiibo
+            <header>
+              <nav>
+                <ul>
+                  <li><Link className='link' to="/">Home</Link></li>
+                  <li><Link className='link' to="/amiibos">Amiibos</Link></li>
+                  <li><Link className='link' to="/contact">Contact</Link></li>
+                </ul>
+              </nav>
+            </header>
           </Typography>
           <Button color="inherit"><Email/></Button>
         </Toolbar>

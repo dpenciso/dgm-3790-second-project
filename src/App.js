@@ -1,16 +1,19 @@
-import React from 'react';
-import './App.css';
-import Amiibo from './Amiibo/Amiibo'
-import Header from './Header/header'
-import ButtonAppBar from './Bar/ButtonAppBar'
-
+import React from "react";
+import "./App.css";
+// import Amiibo from "./Content/Amiibo/Amiibo";
+// import Header from "./Content/Header/header";
+// import ButtonAppBar from "./Content/Bar/ButtonAppBar";
+// import Home from "./Content/Home/Home";
+import { BrowserRouter } from "react-router-dom";
+import Content from "./Content/Content";
 
 function App() {
   return (
     <div className="App">
-      <ButtonAppBar/>
-      <Header/>
-      <Amiibo/>
+      
+      <BrowserRouter>
+        <Content/>
+      </BrowserRouter>
     </div>
   );
 }

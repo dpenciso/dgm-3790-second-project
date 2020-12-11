@@ -68,9 +68,6 @@ function Amiibo() {
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
-                    {/* <Button size="small" color="primary">
-                      Share
-                    </Button> */}
                     <Button size="small" color="primary" onClick={()=> window.open('https://www.nintendo.com/amiibo/', "_blank")}>
                       Learn More
                     </Button>

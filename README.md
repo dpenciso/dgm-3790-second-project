@@ -39,9 +39,13 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## App Features
 
+### Conditional Logic and JavaScript Array Methods
+
+This app uses conditional logic and JavaScript array methods to sort throught he Amiibo API and return the relevant information in cards. This code can be found in the [Amiibo.js](/src/Amiibo/Amiibo.js) file.
+
 ### Function-based Amiibo Component
 
-This component imports a .json file containing information about all the Amiibos ever realeased and displays the figure's name, game, series, and date of release in North America. The Amiibos are sorted by game.
+This app imports a .json file containing information about all the Amiibos ever realeased and displays the figure's name, game, series, and date of release in North America. The Amiibos are sorted by game.
 
 ### Using the useEffect Hook
 
@@ -54,6 +58,30 @@ The primary location of my useContext code is in the [signContext.js](/src/conte
 ### Using the useState Hook
 
 My useState code is used in the [signContext.js](/src/contexts/signContext.js), [Amiibo.js](/src/Amiibo/Amiibo.js), and [Email.js](/src/Email/Email.js) files.
+
+### User Input and Form Validation
+
+This app uses Formik and Material UI in order to get user input and validate the information given in the form of a subcription box. This code can be found in the [Email.js](/src/Email/Email.js) file.
+
+### Custom Components
+
+The custom components used in this app are [Amiibo.js](/src/Amiibo/Amiibo.js), [ButtonAppBar.js](/src/Bar/ButtonAppBar.js), [Amiibo.js](/src/Contact/Contact.js), [Email.js](/src/Email/Email.js), [Header.js](/src/Header/header.js), and [Home.js](/src/Home/Home.js).
+
+### CSS Animations and Transitions
+
+CSS animations and transitions are used in the [Header.js](/src/Header/header.js) and [Email.js](/src/Email/Email.js) components. These are animated in the [Header.css](/src/Header/header.css) and [Email.css](/src/Email/Email.css) files.
+
+### Connecting to Server
+
+This app is connected to the Amiibo API using Axios. This code can be found in the [Amiibo.js](/src/Amiibo/Amiibo.js) component.
+
+### React Router
+
+React Router is used for the routing of this app. <code>Route</code> can be found in the [Content.js](/src/Content.js) component. <code>Link</code> can be found in the [ButtonAppBar.js](/src/Bar/ButtonAppBar.js) component.
+
+### Hosted on Netlify
+
+This app is hosted on Netlify and can be found at [https://reverent-poincare-d2d3a4.netlify.app/](https://reverent-poincare-d2d3a4.netlify.app/)
 
 ## Learn More
 

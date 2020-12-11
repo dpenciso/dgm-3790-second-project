@@ -9,7 +9,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { SignContext } from "../../contexts/signContext"
-import './Email.css'
+import ''
 
 export default function Email() {
   const [open, setOpen] = React.useState(true);

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
-import image from "../nintendo-amiibo.jpg";
 
 function Home() {
   return (

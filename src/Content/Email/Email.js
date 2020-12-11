@@ -9,6 +9,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { SignContext } from "../../contexts/signContext"
+import './Email.css'
 
 export default function Email() {
   const [open, setOpen] = React.useState(true);
@@ -25,7 +26,7 @@ export default function Email() {
 
   return (
     <div>
-      <Button variant="outlined" color="inherit" onClick={handleClickOpen}>
+      <Button variant="outlined" className="subscribeButton" color="inherit" onClick={handleClickOpen}>
         Subscribe
       </Button>
       <Dialog

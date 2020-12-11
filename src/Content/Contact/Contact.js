@@ -3,7 +3,7 @@ import React from "react";
 function Contact() {
   return (
     <div>
-      <h1>Hello Contact</h1>
+      <h1>Contact Us</h1>
       <div className="contact-box">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSfbAgfLF8LAj25IN9xFRTvBDoNo-yZEd4QETSWk0M9E9yMIUQ/viewform?embedded=true"

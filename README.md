@@ -53,31 +53,31 @@ The primary location of my useEffect code is in the [Amiibo.js](/src/Content/Ami
 
 ### Using the useContext Hook
 
-The primary location of my useContext code is in the [signContext.js](/src/contexts/signContext.js) file and it is then imported to the [Email.js](/src/Email/Email.js) file.
+The primary location of my useContext code is in the [signContext.js](/src/contexts/signContext.js) file and it is then imported to the [Email.js](/src/Content/Email/Email.js) file.
 
 ### Using the useState Hook
 
-My useState code is used in the [signContext.js](/src/contexts/signContext.js), [Amiibo.js](/src/Amiibo/Amiibo.js), and [Email.js](/src/Email/Email.js) files.
+My useState code is used in the [signContext.js](/src/contexts/signContext.js), [Amiibo.js](/src/Content/Amiibo/Amiibo.js), and [Email.js](/src/Content/Email/Email.js) files.
 
 ### User Input and Form Validation
 
-This app uses Formik and Material UI in order to get user input and validate the information given in the form of a subcription box. This code can be found in the [Email.js](/src/Email/Email.js) file.
+This app uses Formik and Material UI in order to get user input and validate the information given in the form of a subcription box. This code can be found in the [Email.js](/src/Content/Email/Email.js) file.
 
 ### Custom Components
 
-The custom components used in this app are [Amiibo.js](/src/Amiibo/Amiibo.js), [ButtonAppBar.js](/src/Bar/ButtonAppBar.js), [Amiibo.js](/src/Contact/Contact.js), [Email.js](/src/Email/Email.js), [Header.js](/src/Header/header.js), and [Home.js](/src/Home/Home.js).
+The custom components used in this app are [Amiibo.js](/src/Content/Amiibo/Amiibo.js), [ButtonAppBar.js](/src/Content/Bar/ButtonAppBar.js), [Amiibo.js](/src/Content/Contact/Contact.js), [Email.js](/src/Content/Email/Email.js), [Header.js](/src/Content/Header/header.js), and [Home.js](/src/Content/Home/Home.js).
 
 ### CSS Animations and Transitions
 
-CSS animations and transitions are used in the [Header.js](/src/Header/header.js) and [Email.js](/src/Email/Email.js) components. These are animated in the [Header.css](/src/Header/header.css) and [Email.css](/src/Email/Email.css) files.
+CSS animations and transitions are used in the [Header.js](/src/Content/Header/header.js) and [Email.js](/src/Content/Email/Email.js) components. These are animated in the [Header.css](/src/Content/Header/header.css) and [Email.css](/src/Content/Email/Email.css) files.
 
 ### Connecting to Server
 
-This app is connected to the Amiibo API using Axios. This code can be found in the [Amiibo.js](/src/Amiibo/Amiibo.js) component.
+This app is connected to the Amiibo API using Axios. This code can be found in the [Amiibo.js](/src/Content/Amiibo/Amiibo.js) component.
 
 ### React Router
 
-React Router is used for the routing of this app. <code>Route</code> can be found in the [Content.js](/src/Content.js) component. <code>Link</code> can be found in the [ButtonAppBar.js](/src/Bar/ButtonAppBar.js) component.
+React Router is used for the routing of this app. <code>Route</code> can be found in the [Content.js](/src/Content/Content.js) component. <code>Link</code> can be found in the [ButtonAppBar.js](/src/Content/Bar/ButtonAppBar.js) component.
 
 ### Hosted on Netlify
 

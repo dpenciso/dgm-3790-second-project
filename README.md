@@ -41,7 +41,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### Conditional Logic and JavaScript Array Methods
 
-This app uses conditional logic and JavaScript array methods to sort throught he Amiibo API and return the relevant information in cards. This code can be found in the [Amiibo.js](/src/Amiibo/Amiibo.js) file.
+This app uses conditional logic and JavaScript array methods to sort throught he Amiibo API and return the relevant information in cards. This code can be found in the [Amiibo.js](/src/Content/Amiibo/Amiibo.js) file.
 
 ### Function-based Amiibo Component
 
@@ -49,7 +49,7 @@ This app imports a .json file containing information about all the Amiibos ever 
 
 ### Using the useEffect Hook
 
-The primary location of my useEffect code is in the [Amiibo.js](/src/Amiibo/Amiibo.js) file.
+The primary location of my useEffect code is in the [Amiibo.js](/src/Content/Amiibo/Amiibo.js) file.
 
 ### Using the useContext Hook
 

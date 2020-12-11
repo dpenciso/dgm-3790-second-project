@@ -24,6 +24,7 @@ function Home() {
       </p>
       <div className="homeVideo">
         <iframe
+          title="youtubeVideo"
           width="750"
           height="500"
           src="https://www.youtube.com/embed/odUjMhc6YgU"

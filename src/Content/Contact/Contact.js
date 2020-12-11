@@ -6,6 +6,7 @@ function Contact() {
       <h1>Contact Us</h1>
       <div className="contact-box">
         <iframe
+          title="contactForm"
           src="https://docs.google.com/forms/d/e/1FAIpQLSfbAgfLF8LAj25IN9xFRTvBDoNo-yZEd4QETSWk0M9E9yMIUQ/viewform?embedded=true"
           width="640"
           height="800"

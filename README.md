@@ -65,7 +65,7 @@ This app uses Formik and Material UI in order to get user input and validate the
 
 ### Custom Components
 
-The custom components used in this app are [Amiibo.js](/src/Content/Amiibo/Amiibo.js), [ButtonAppBar.js](/src/Content/Bar/ButtonAppBar.js), [Amiibo.js](/src/Content/Contact/Contact.js), [Email.js](/src/Content/Email/Email.js), [Header.js](/src/Content/Header/header.js), and [Home.js](/src/Content/Home/Home.js).
+The custom components used in this app are [Amiibo.js](/src/Content/Amiibo/Amiibo.js), [ButtonAppBar.js](/src/Content/Bar/ButtonAppBar.js), [Contact.js](/src/Content/Contact/Contact.js), [Email.js](/src/Content/Email/Email.js), [Header.js](/src/Content/Header/header.js), and [Home.js](/src/Content/Home/Home.js).
 
 ### CSS Animations and Transitions
 
